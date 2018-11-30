@@ -288,6 +288,7 @@ class GFExactTarget {
                             <option value="s1" id="s1" <?php if($settings["instance"] == "s1") echo "selected"; ?>>S1</option>
                             <option value="s4" id="s4" <?php if($settings["instance"] == "s4") echo "selected"; ?>>S4</option>
                             <option value="s6" id="s6" <?php if($settings["instance"] == "s6") echo "selected"; ?>>S6</option>
+                            <option value="s7" id="s7" <?php if($settings["instance"] == "s7") echo "selected"; ?>>S7</option>
                         </select>
                     <span class="howto"><?php _e("When you log in to ExactTarget, does the URL start with <code>https://members.<strong>s1</strong>.exacttarget.com</code>, <code>https://members.<strong>s4</strong>.exacttarget.com</code> or <code>https://members.<strong>s6</strong>.exacttarget.com</code>? Please select the matching value from the list. Need more help?", "gravity-forms-exacttarget"); ?> <a rel="external" target="_blank" href="http://wiki.memberlandingpages.com/010_ExactTarget/010_Getting_Started/The_Getting_Started_Guide/Set_Up_Your_Account#How_To_Determine_What_Instance_You're_On"><?php _e("How to Determine What Instance You're On", "gravity-forms-exacttarget"); ?></a>.</span>
                     </td>
