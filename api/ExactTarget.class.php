@@ -119,23 +119,22 @@ class ExactTarget {
 
     private function setWSDL()
     {
-        $baseUrl = "";
-        if($this->s4) {
-            $baseUrl = 'webservice.s4.exacttarget.com';
-        } else {
-            $baseUrl = 'webservice.exacttarget.com';
-        }
-        if($this->instance == "s1")
-        {
-            $baseUrl = 'webservice.exacttarget.com';
-        }
-        if($this->instance == "s4")
-        {
-            $baseUrl = 'webservice.s4.exacttarget.com';
-        }
-        if($this->instance == "s6")
-        {
-            $baseUrl = 'webservice.s6.exacttarget.com';
+        switch ( $this->instance ) {
+            case 's4':
+                $baseUrl = 'webservice.s4.exacttarget.com';
+                break;
+
+            case 's6':
+                $baseUrl = 'webservice.s6.exacttarget.com';
+                break;
+
+            case 's7':
+                $baseUrl = 'webservice.s7.exacttarget.com';
+                break;
+
+            default:
+                $baseUrl = 'webservice.exacttarget.com';
+                break;
         }
         //return 'https://webservice.s4.exacttarget.com/etframework.wsdl';
         if($this->runscope) {
