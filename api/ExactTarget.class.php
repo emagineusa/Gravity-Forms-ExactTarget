@@ -121,15 +121,9 @@ class ExactTarget {
     {
         switch ( $this->instance ) {
             case 's4':
-                $baseUrl = 'webservice.s4.exacttarget.com';
-                break;
-
             case 's6':
-                $baseUrl = 'webservice.s6.exacttarget.com';
-                break;
-
             case 's7':
-                $baseUrl = 'webservice.s7.exacttarget.com';
+                $baseUrl = "webservice.{$this->instance}.exacttarget.com";
                 break;
 
             default:
