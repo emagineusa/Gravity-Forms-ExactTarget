@@ -79,7 +79,7 @@ class ExactTarget {
             $rrm->RetrieveRequest = $rr;
             $results = $client->Retrieve($rrm);
             if(!(strtoupper($results->OverallStatus) == "OK")) {
-                $this->lastError = $result->OverallStatus();
+                $this->lastError = $results->OverallStatus;
                 return false;
             }
             return true;
