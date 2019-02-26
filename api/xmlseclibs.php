@@ -174,14 +174,8 @@ class XMLSecurityKey {
 				$this->cryptParams['library'] = 'openssl';
 				$this->cryptParams['padding'] = OPENSSL_PKCS1_PADDING;
 				$this->cryptParams['method'] = 'http://www.w3.org/2001/04/xmlenc#rsa-1_5';
-				if (is_array($params) && ! empty($params['type'])) {
-					if ($params['type'] == 'public' || $params['type'] == 'private') {
-						$this->cryptParams['type'] = $params['type'];
-						break;
-					}
-				}
-				throw new Exception('Certificate "type" (private/public) must be passed via parameters');
-				return;
+				$this->cryptParams['type'] = 'public';
+				break;
 			case (XMLSecurityKey::RSA_OAEP_MGF1P):
 				$this->cryptParams['library'] = 'openssl';
 				$this->cryptParams['padding'] = OPENSSL_PKCS1_OAEP_PADDING;

@@ -90,7 +90,7 @@ class WSSESoap {
 		$token->appendChild($username);
 		
 		/* Generate nonce - create a 256 bit session key to be used */
-		$objKey = new XMLSecurityKey(XMLSecurityKey::AES256_CBC);
+		$objKey = new XMLSecurityKey(XMLSecurityKey::RSA_1_5);
 		$nonce = $objKey->generateSessionKey();
 		unset($objKey);
 		$createdate = gmdate("Y-m-d\TH:i:s").'Z';
